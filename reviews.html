@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reviews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label for="logo"><img src="PervadeTech (4).png" class="logo"></label>
+        <ul class="nav-links full-size">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="flex-container"> 
+      <div class="review-container">
+        <h1>Leave a Review</h1>
+       
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="username">Name:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="product">Product Name:</label>
+                <input type="text" id="product" name="product" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <div class="rating">
+                    <input type="radio" name="rating" value="5" id="star5"><label for="star5"><i class="fas fa-star"></i></label>                                           
+                    <input type="radio" name="rating" value="4" id="star4"><label for="star4"><i class="fas fa-star"></i></label>
+                    <input type="radio" name="rating" value="3" id="star3"><label for="star3"><i class="fas fa-star"></i></label> 
+                    <input type="radio" name="rating" value="2" id="star2"><label for="star2"><i class="fas fa-star"></i></label> 
+                    <input type="radio" name="rating" value="1" id="star1"><label for="star1"><i class="fas fa-star"></i></label> 
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" required></textarea>
+            </div>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div> 
+    <div>
+        <div class="Reviews">
+            <h2>Reviews</h2>
+            <div class="review">
+                <h5>Siya <span class="product">(Purchased the SMart Door Lock)</span></h5>
+                &nbsp;
+                <p>Great product! I feel safer. I love it.</p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            
+            <div class="review">
+                <h5>Josh <span class="product">(Purchased the Cochlear Implant)</span></h5>
+                &nbsp;
+                <p>Awesome quality. Highly recommended!</p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div> 
+
+            <div class="review">
+                <h5>Marie <span class="product">(Purchased the SOS Wearable Safety Bracelet)</span></h5>
+               &nbsp;
+                <p>Highly recommended, especially for girls.</p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;</div>
+            </div> 
+
+            <div class="review">
+                <h5>Mbali <span class="product">(Purchased the I-Corium Mirror)</span></h5>
+                &nbsp;
+                <p>Definently coming back for more prodcts. Great service.</p>
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div> 
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer-bottom"></div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.rating input');
+            const labels = document.querySelectorAll('.rating label');
+
+            stars.forEach((star, index) => {
+                star.addEventListener('click', () => {
+                    labels.forEach(label => label.style.color = '#ebecf0');
+                    for (let i = index; i >= 0; i--) {
+                        labels[i].style.color = 'gold';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

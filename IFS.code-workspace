@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../IFS"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Group 5 Website"
+	}
+}
